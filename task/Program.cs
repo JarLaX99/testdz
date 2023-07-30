@@ -24,4 +24,5 @@ void PrintArray(string[] arrayForPrint)
 {
     System.Console.WriteLine("[" + string.Join("] [", arrayForPrint) + "]");
 }
+
 main();
