@@ -14,6 +14,9 @@ void main()
     string[] array = ReadString("заполните массив через пробел: ");
     System.Console.WriteLine("Исходный массив");
     PrintArray(array);
+    string[] newArray = NewArray(array);
+    System.Console.WriteLine("Новый массив");
+    PrintArray(newArray);
 }
 string[] ReadString(string text)
 {
@@ -34,8 +37,8 @@ string[] NewArray(string[] array)
     for (int i = 0; i < tempArray.Length; i++)
     {
         string str = array[rand.Next(array.Length)];
-        tempArray[i] =str;
-        int Index = Array.IndexOf(array,str);
+        tempArray[i] = str;
+        int Index = Array.IndexOf(array, str);
         array = array.Where((v, i) => i != Index).ToArray();
     }
     return tempArray;
