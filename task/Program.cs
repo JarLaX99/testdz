@@ -31,14 +31,23 @@ void PrintArray(string[] arrayForPrint)
 
 string[] NewArray(string[] array)
 {
-    Random rand = new Random();
-    string[] tempArray = new string[rand.Next(0, 4)];
-    for (int i = 0; i < tempArray.Length; i++)
+    int count = 0;  
+    for (int i = 0; i < array.Length; i++)
     {
-        string str = array[rand.Next(array.Length)];
-        tempArray[i] = str;
-        int Index = Array.IndexOf(array, str);
-        array = array.Where((v, i) => i != Index).ToArray();
+        if (array[i].Length <= 3)
+        {
+            count++;
+        }
+    }
+    string[] tempArray = new string[count];
+
+    for(int j =0,i=0;j<tempArray.Length;i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            tempArray[j]=array[i];
+            j++;
+        }
     }
     return tempArray;
 }
