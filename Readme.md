@@ -24,5 +24,8 @@
 
 ![Primer](Primer.jpg)
 
-## Блок схема
+
+## Блок схема для метода `NewArray`
+
+![flowchart-NewArray](flowchart-NewArray.jpg)
 
